@@ -1,4 +1,7 @@
 class NextGeneration < Struct.new(:matrix)
+    DEAD = '.'
+    ALIVE = '*'
+
     def next
         NextGeneration.new(next_generation)
     end
@@ -18,24 +21,23 @@ class NextGeneration < Struct.new(:matrix)
     end
 
     def dead_or_alive(cell, coordinates)
-        if cell == 1
+        if cell == ALIVE
             case  live_neighbours(coordinates)
-            when  0..1 then 0
-            when 2..3 then 1
-            else 0
+            when  0..1 then DEAD
+            when 2..3 then ALIVE
+            else DEAD
             end
-
         else
             if live_neighbours(coordinates) == 3
-                1
+               ALIVE
             else
-                0
+                DEAD
             end
         end
     end
 
     def live_neighbours(coordinates)
-        neighbours(*coordinates).select { |cell| cell == 1 }.size
+        neighbours(*coordinates).select { |cell| cell == ALIVE }.size
     end
 
     def neighbours(x, y)

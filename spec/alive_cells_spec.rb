@@ -9,17 +9,17 @@ describe NextGeneration do
         context '0 live neighbours' do
             let(:start_matrix) do
                 [
-                    [0, 0, 0],
-                    [0, 1, 0],
-                    [0, 0, 0]
+                    ['.', '.', '.'],
+                    ['.', '*', '.'],
+                    ['.', '.', '.']
                 ]
             end
 
             let(:end_matrix) do
                 [
-                    [0, 0, 0],
-                    [0, 0, 0],
-                    [0, 0, 0]
+                    ['.', '.', '.'],
+                    ['.', '.', '.'],
+                    ['.', '.', '.']
                 ]
             end
 
@@ -29,17 +29,17 @@ describe NextGeneration do
         context '1 live neighbours' do
             let(:start_matrix) do
                 [
-                    [0, 0, 0],
-                    [0, 1, 0],
-                    [0, 1, 0]
+                    ['.', '.', '.'],
+                    ['.', '*', '.'],
+                    ['.', '*', '.']
                 ]
             end
 
             let(:end_matrix) do
                 [
-                    [0, 0, 0],
-                    [0, 0, 0],
-                    [0, 0, 0]
+                    ['.', '.', '.'],
+                    ['.', '.', '.'],
+                    ['.', '.', '.']
                 ]
             end
 
@@ -51,17 +51,17 @@ describe NextGeneration do
         context '2 live neighbours' do
             let(:start_matrix) do
                 [
-                    [1, 0, 0],
-                    [0, 1, 0],
-                    [0, 0, 1]
+                    ['*', '.', '.'],
+                    ['.', '*', '.'],
+                    ['.', '.', '*']
                 ]
             end
 
             let(:end_matrix) do
                 [
-                    [0, 0, 0],
-                    [0, 1, 0],
-                    [0, 0, 0]
+                    ['.', '.', '.'],
+                    ['.', '*', '.'],
+                    ['.', '.', '.']
                 ]
             end
 
@@ -71,17 +71,17 @@ describe NextGeneration do
         context '3 live neighbours' do
             let(:start_matrix) do
                 [
-                    [1, 0, 1],
-                    [0, 1, 0],
-                    [0, 1, 0]
+                    ['*', '.', '*'],
+                    ['.', '*', '.'],
+                    ['.', '*', '.']
                 ]
             end
 
             let(:end_matrix) do
                 [
-                    [0, 1, 0],
-                    [1, 1, 1],
-                    [0, 0, 0]
+                    ['.', '*', '.'],
+                    ['*', '*', '*'],
+                    ['.', '.', '.']
                 ]
             end
 
@@ -93,17 +93,17 @@ describe NextGeneration do
         context '4 live neighbours' do
             let(:start_matrix) do
                 [
-                    [1, 1, 1],
-                    [0, 1, 0],
-                    [0, 1, 0]
+                    ['*', '*', '*'],
+                    ['.', '*', '.'],
+                    ['.', '*', '.']
                 ]
             end
 
             let(:end_matrix) do
                 [
-                    [1, 1, 1],
-                    [0, 0, 0],
-                    [0, 0, 0]
+                    ['*', '*', '*'],
+                    ['.', '.', '.'],
+                    ['.', '.', '.']
                 ]
             end
 
