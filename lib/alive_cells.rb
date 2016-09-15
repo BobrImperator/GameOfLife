@@ -49,13 +49,11 @@ class NextGeneration < Struct.new(:matrix)
             end
 
         else
-            # binding.pry if coordinates == [3,2]
-            if live_neighbours(coordinates) >= 3
+            if live_neighbours(coordinates) == 3
                 1
             else
                 0
             end
-
         end
     end
 
