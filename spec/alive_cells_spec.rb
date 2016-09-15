@@ -1,5 +1,5 @@
 require 'spec_helper'
-load 'lib/alive_cells.rb'
+require 'next_generation'
 
 describe NextGeneration do
     let(:generator) { NextGeneration.new(start_matrix) }
