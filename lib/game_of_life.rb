@@ -1,14 +1,20 @@
-class NextGeneration < Struct.new(:matrix)
+class GameOfLife < Struct.new(:matrix)
     DEAD = '.'
     ALIVE = '*'
 
+    def self.parse(generation)
+      new(generation.split("\n").map {|line| line.split('') })
+    end
+
     def next
-        NextGeneration.new(next_generation)
+        GameOfLife.new(next_generation)
     end
 
     def to_s
-        matrix.map { |line| line.join('') + "\n" }.join
+        matrix.map { |line| line.join('') }.join("\n")
     end
+
+    private
 
     def next_generation
         matrix.map.with_index do |row, y|
