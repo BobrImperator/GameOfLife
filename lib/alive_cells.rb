@@ -92,11 +92,11 @@ input = '.........*
 .....**...
 '
 
-input_translate_test = TranslateToMatrix.new(input)
-input_translate_test.matrix
-next_generation = NextGeneration.new(input_translate_test.matrix)
-1.times { next_generation = next_generation.next }
-puts next_generation
+# input_translate_test = TranslateToMatrix.new(input)
+# input_translate_test.matrix
+# next_generation = NextGeneration.new(input_translate_test.matrix)
+# 1.times { next_generation = next_generation.next }
+# puts next_generation
 
 output = '..........
 ...*......
